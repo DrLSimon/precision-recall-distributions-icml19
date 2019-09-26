@@ -12,6 +12,15 @@ A list of required packages is provided in [requirements_minimal.txt](requiremen
 pip install -r requirements_minimal.txt
 ```
 
+Alternatively, you may find a yaml conda environment file [conda_env.yaml](conda_env.yaml) that can be used as follows:
+```shell
+# If you want to complete your current environment
+conda env update -f conda_env.yaml
+# Or if you want a fresh new environment (named here prdenv)
+conda env create -n prdenv -f conda_env.yaml
+conda activate prdenv
+```
+
 ### Automatic: Compute PRD for folders of images on disk
 Example: you have a folder of images from your true distribution (e.g., `~/real_images/`) and any number of folders of generated images (e.g., `~/generated_images_1/` and `~/generated_images_2/`). Note that the number of images in each folder needs to be the same.
 
